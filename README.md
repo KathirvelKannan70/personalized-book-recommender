@@ -1,96 +1,91 @@
 📚 Personalized Book Recommender System
-A Streamlit-based web application that provides personalized book recommendations using collaborative filtering.
-Users can explore Top 50 popular books, get similar book recommendations, and view the dataset used.
+A Streamlit-based web application that provides personalized book recommendations using collaborative filtering. Users can explore the Top 50 popular books, get book suggestions based on selected titles, and even view the dataset behind the scenes.
 
+<p align="center"> <img src="screenshot.png" width="600" alt="App Screenshot"> </p>
 🚀 Features
-Top 50 Books – Quickly view the most popular books
+📖 Top 50 Books – Quickly explore the most popular books among users
 
-Personalized Recommendations – Get similar books for your selected title
+🔍 Personalized Recommendations – Select a book and get similar book suggestions
 
-Interactive Web App – Built using Streamlit
+🧠 Collaborative Filtering – Uses user-item interactions for generating recommendations
 
-Dataset Preview – Explore the books dataset used in the project
+🖥️ Interactive Web Interface – Built using Streamlit for a smooth and minimal UI
 
-📸 Screenshot
-<p align="center"> <img src="screenshot.png" width="600"> </p>
-🗂 Project Structure
+📊 Dataset Preview – Easily browse through the books, ratings, and user information
+
+🗂️ Project Structure
 nginx
 Copy
 Edit
 Personalized Book Recommender/
 │
-├── app.py                    # Main Streamlit app
-├── books.pkl                 # Book details in pickle format
-├── popular.pkl               # Precomputed top 50 popular books
-├── pt.pkl                    # Pivot table for recommendations
-├── similarity_scores.pkl     # Precomputed similarity scores
+├── app.py                    # Main Streamlit application
+├── books.pkl                 # Pickled book metadata
+├── popular.pkl               # Top 50 most popular books
+├── pt.pkl                    # Pivot table used for recommendations
+├── similarity_scores.pkl     # Precomputed similarity matrix
 │
-├── Code-3_page.py            # Experimental app script
-├── code.py                   # Supporting Python code
-├── Recommender.ipynb         # Notebook for recommendation model
-├── Final_code b2.ipynb       # Final Jupyter notebook
+├── Code-3_page.py            # Experimental Streamlit version
+├── code.py                   # Helper script for backend functions
+├── Recommender.ipynb         # Notebook for building and testing the model
+├── Final_code b2.ipynb       # Final version of the Jupyter Notebook
 │
-├── Data/                     # Original datasets
-│   ├── Books.csv             # Books metadata
+├── Data/
+│   ├── Books.csv             # Book metadata
 │   ├── Ratings.csv           # User ratings
-│   └── Users.csv             # User info
+│   └── Users.csv             # User demographics
 │
-├── Data Dictionary.md        # Data dictionary for datasets
-├── notes.md                  # Development notes
+├── Data Dictionary.md        # Explanation of each dataset column
+├── notes.md                  # Developer notes and observations
 ├── slides.md                 # Project presentation slides
-└── README.md                 # Project documentation
+└── README.md                 # Documentation file
 ⚙️ Installation
-1️⃣ Clone the repository
-
+1️⃣ Clone the Repository
 bash
 Copy
 Edit
 git clone https://github.com/KathirvelKannan70/personalized-book-recommender.git
 cd personalized-book-recommender
-2️⃣ Install dependencies
+2️⃣ Install Dependencies
+Using requirements.txt (if available):
 
 bash
 Copy
 Edit
 python -m pip install -r requirements.txt
-If no requirements.txt is provided:
+Or install manually:
 
 bash
 Copy
 Edit
 python -m pip install streamlit pandas numpy pickle-mixin
 ▶️ Usage
-Navigate to the project folder:
+Navigate to your project directory and launch the app:
 
 bash
 Copy
 Edit
 cd "C:\Personalized Book Recommender"
-Run the Streamlit app:
+streamlit run app.py
+The app will open in your browser, typically at: http://localhost:8501
 
-bash
-Copy
-Edit
-python -m streamlit run app.py
-Open the local URL in your browser (usually http://localhost:8501)
+📊 Dataset Details
+Books.csv – Book metadata: ISBN, title, author, publisher, year
 
-📊 Dataset
-Books.csv – Book details (ISBN, title, author, year, publisher)
+Ratings.csv – Ratings provided by users for each book
 
-Ratings.csv – User ratings for books
+Users.csv – User demographic details like location and age
 
-Users.csv – User demographic details
-
-The .pkl files store preprocessed data and similarity scores to make the app faster.
+Pickle Files – Store preprocessed data structures for fast recommendations
 
 🧠 How It Works
-Collaborative Filtering generates book recommendations based on user preferences.
+Collaborative Filtering: Finds similar books based on user-item interactions
 
-Precomputed Similarity matrix allows quick recommendation lookup.
+Cosine Similarity: Precomputed using a pivot table of user-book ratings
 
-Streamlit Web App provides an interactive interface for end-users.
+Streamlit Interface: Clean and fast UI to display recommendations and analytics
 
 👨‍💻 Author
-Developed by Kathirvel Kannan
-Project for academic/demo purposes.
-
+Kathirvel Kannan
+M.Tech Software Engineering
+📍 Project for Academic Demonstration
